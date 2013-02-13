@@ -1,4 +1,8 @@
 <div id="home">
+	<div id="cv">
+		<a href="http://dl.dropbox.com/u/54926/CV/Martin%20Moscosa%20CV%20%5BEnglish%5D.pdf" target="_blank" title="CV" class="btn btn-danger"><i class="icon-download-alt"></i> CV (PDF)</a>
+		<a href="http://vizualize.me/mmoscosa#.URrin1rfzwM" target="_blank" title="Infographic" class="btn">CV (Infographic)</a>
+	</div>
 	<div class="row-fluid" id="about">
 		<h3>About…</h3>
 		<p>I have recently achieved an <a href="http://www.st-andrews.ac.uk/management/programmes/pgtaught/mit/">MSc in Management and Information Technology</a> at <a href="http://www.st-andrews.ac.uk/">St Andrews University</a> (November 2011). Before that I graduated as <a href="https://serviciosva.itesm.mx/PlanesEstudio/Consultas/Planes/ConsultaPlanEstudio.aspx?form=PLANESTUDIO&contenido=caratula&modovista=area&Idioma=ING&claveprograma=ISC09&UnaCol=NO&VerReq=&VerEqui=">ISC</a> from <a href="http://www.itesm.edu/wps/wcm/connect/Campus/GDA/Guadalajara/">Tecnológico de Monterrey Campus Guadalajara</a> (Generation Dec 2009). Am an entrepreneur who likes <span>challenges;</span> my background has helped me to become a person who can adapt to new environments and having and <span>open mind.</span> Thinking always in <span>solutions</span> instead of problems. This website is aimed to share a little bit of me personally and as a professional, I hope you enjoy it!</p>
@@ -15,9 +19,9 @@
 
 	<div class="row-fluid">
 		<h3>My Passions</h3>
-		<div class="span5 passion metro photography">
+		<div class="span6 passion metro photography">
 			<i class="icon-camera"></i>
-			<h4>Photos</h4>
+			<h4>Photography</h4>
 			<p>You might see in my <span>photography</span> section that this is one of my greatest <span>passions</span>. This activity gives me the necessary skills to develop my <span>creativity</span> and a way to constantly <span>think outside the box</span>.</p>
 		</div>
 		<div class="span5 passion metro traveling">
@@ -30,7 +34,7 @@
 			<h4>Cooking</h4>
 			<p><span>Creating</span> something from scratch with your own hands, that you can later <span>share</span>. I believe this is something that has no price and it gives a feeling of <span>accomplishment</span>. Of course the <span>best</span> part is when you get the chance to gather to eat and have fun with <span>friends and loved</span>.</p>
 		</div>
-		<div class="span5 passion metro archery">
+		<div class="span6 passion metro archery">
 			<i class="icon-screenshot"></i>
 			<h4>Archery</h4>
 			<p>Is a sport that allows me to </span>concentrate under stressful situations</span>. I participated in the <span>world championship -versus-</span> in 2009 (Guadalajara, Jal - Mex.) where I had the opportunity to compete against the <span>best archers in the world.</span></p>

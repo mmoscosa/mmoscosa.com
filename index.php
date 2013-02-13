@@ -15,6 +15,10 @@
 	<script src="js/main.js" type="text/javascript"></script>
 </head>
 <body>
+	<div id="modal">
+		<div id="submenu">
+		</div>
+	</div>
 	<div class="container-fluid">
 		<div class="row-fluid">
 			<div class="span3 well hidden-phone" id="navigation">
@@ -37,11 +41,11 @@
 				</div>
 				<nav>
 					<ul>
-						<a href="#"><li id="active" class="first">Home</li></a>
-						<!-- <a href="#"><li>Portfolio</li></a>
-						<a href="#"><li>Blog</li></a>
-						<a href="#"><li>Photos</li></a>
-						<a href="#"><li>Contact</li></a> -->
+						<a href="#"><li id="nav-home" class="first">Home</li></a>
+						<a href="#"><li id="nav-blog">Blog</li></a>
+						<!-- <a href="#"><li id="nav-portfolio">Portfolio</li></a>
+						<a href="#"><li id="nav-photos">Photos</li></a>
+						<a href="#"><li id="nav-contact">Contact</li></a> -->
 					</ul>
 				</nav>
 				<footer>
@@ -49,7 +53,11 @@
 				</footer>
 			</div>
 			<div class="span8 offset3">
-				<div id="content-for-layout"></div>
+				<div id="content-for-layout">
+					<div class="loading">
+						<i class="icon-spinner icon-spin icon-4x"></i>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

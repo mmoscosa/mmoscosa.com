@@ -1,4 +1,13 @@
 #home{
+	#cv{
+		float: right;
+		margin-top: -1px;
+		margin-right: 12px;
+		.btn{
+			.border-radius(0);
+			margin-left: 12px;
+		}
+	}
 	#about{
 		line-height: 1.9em;
 		p{
@@ -22,13 +31,15 @@
 				}
 			}
 		}
+		span{
+			// background-color: lighten(rgb(210, 71, 38), 10%);
+			// color: @white;
+			// padding: 0 5px 2px 5px;
+			border-bottom: dotted 2px lighten(rgb(210, 71, 38), 10%);
+		}
 	}
 
-				// span{
-				// 	background-color: lighten(rgb(210, 71, 38), 10%);
-				// 	color: @white;
-				// 	padding: 0 5px 2px 5px;
-				// }
+
 	.metro{
 			i{
 				position: relative;

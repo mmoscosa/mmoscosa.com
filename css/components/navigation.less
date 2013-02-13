@@ -43,7 +43,14 @@
 				&.first{
 					border-top: 1px dotted @gray;
 				}
-				&#active{border-right: 15px solid @primaryColour;}
+				&.active{border-right: 15px solid @primaryColour;}
+				&:hover{
+					background: @primaryColour;
+					color: @white;
+				}
+			}
+			a:hover{
+				text-decoration: none;
 			}
 		}
 	}
