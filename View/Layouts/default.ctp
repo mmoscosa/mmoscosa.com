@@ -15,10 +15,8 @@
 
 		echo $this->Html->css('main');
 		echo $this->Html->script('//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js');
-		echo $this->Html->script('modernizr-1.7.min');
 		echo $this->Html->script('bootstrap-tooltip');
 		echo $this->Html->script('main');
-		echo $this->Html->script('contact');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');

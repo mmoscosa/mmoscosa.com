@@ -7,15 +7,15 @@ class BlogController extends AppController {
 	public $components = array('Posterous', 'Session');
 
     public function index() {
-    	$posts = $this->posterous->get_posts();
-        $total = count($posts);
-        print_r($total);
-        pr($posts);
-        die();
-    	foreach ($posts as $post){
-    		$post_id = $post->id;
-    		break;
-    	}
+        $this->layout = 'ajax';
+        $posts = array();
+    	$posterous = $this->posterous->get_posts();
+        foreach ($posterous as $key => $post) {
+            $posts['Post'][$key]['title'] = $post->title;
+            $posts['Post'][$key]['url'] = $post->short_url;
+        }
+        $total = count($posterous);
+            $posts['Total'] = $total;
 		$this->set(compact('posts'));
     }
 }

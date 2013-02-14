@@ -8,19 +8,19 @@ class ContactController extends AppController {
 	public function index(){
 		$this->layout = 'ajax';
 		if(!empty($this->data)){
-			if(!empty($this->data['Contact']['honey'])){
+			if(!empty($this->data['honey'])){
 				$this->Session->setFlash('Please try again and check input provided.');
 				$this->redirect(array('action' => 'index'));
 			}
 			if($this->Contact->validates()){
 				$this->Email->to = 'mmoscosa@gmail.com';
-				$this->Email->replyTo = $this->data['Contact']['email'];
-				$this->Email->from = $this->data['Contact']['name']."<".$this->data['Contact']['email'].">";
+				$this->Email->replyTo = $this->data['email'];
+				$this->Email->from = $this->data['name']."<".$this->data['email'].">";
 				$this->Email->subject = 'Contact Form [mmoscosa]';
 
 				//$this->Email->delivery = 'debug';
 
-				if ($this->Email->send($this->data['Contact']['message'])) {
+				if ($this->Email->send($this->data['message'])) {
 					$this->Session->setFlash('Thank you for contacting me, I will get in touch shortly.');
 					$this->redirect(array('controller' => 'pages', 'action' => 'display'));
 				} else {

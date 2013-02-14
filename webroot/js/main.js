@@ -4,6 +4,7 @@ function resetNav() {
 	$('#nav-photos').removeClass('active');
 	$('#nav-portfolio').removeClass('active');
 	$('#nav-contact').removeClass('active');
+	$('#submenu').hide();
 }
 
 function loadHome() {
@@ -17,39 +18,21 @@ function showModal() {
 
 function loadBlog() {
 	$('#submenu').load('/blog', function() {
-		showModal();
 		$('.icon-spinner').hide();
+		$('#submenu').show();
 	});
 }
 
 function loadContact() {
-	$('#submenu').load('views/contact/index.php', function() {
-		showModal();
+	$('#submenu').load('/contact', function() {
 		$('.icon-spinner').hide();
+		$('#submenu').show();
 	});
 }
 
-function checkSize() {
-    //small-screen
-    if (window.innerWidth < 1025) {
-        $('.passion').removeClass('metro');
-    }else{
-		$('.passion').addClass('metro');
-    }
-    //end small-screen
-}
-
-$(window).resize(function() {
-    checkSize();
-});
 
 $(document).ready(function() {
-	checkSize();
-	//loadHome();
-	// $('#modal').click(function(){
-	// 	resetNav();
-	// 	loadHome();
-	// });
+	loadHome();
 
 	//NAVBAR
 	$('#nav-home').click(function(){
@@ -61,6 +44,7 @@ $(document).ready(function() {
 		resetNav();
 		$(this).addClass('active');
 		$(this).append('<i class="icon-spinner icon-spin"></i>');
+		showModal();
 		loadBlog();
 		return false;
 	});
@@ -68,6 +52,7 @@ $(document).ready(function() {
 		resetNav();
 		$(this).addClass('active');
 		$(this).append('<i class="icon-spinner icon-spin"></i>');
+		showModal();
 		loadContact();
 		return false;
 	});
