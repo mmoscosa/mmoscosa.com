@@ -16,7 +16,7 @@ function showModal() {
 }
 
 function loadBlog() {
-	$('#submenu').load('views/blog/index.php', function() {
+	$('#submenu').load('/blog', function() {
 		showModal();
 		$('.icon-spinner').hide();
 	});
