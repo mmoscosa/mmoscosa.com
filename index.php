@@ -12,10 +12,13 @@
 	<link rel="stylesheet" href="css/main.css">
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+	<script src="js/modernizr-1.7.min.js" type="text/javascript"></script>
+	<script src="js/bootstrap-tooltip.js" type="text/javascript"></script>
 	<script src="js/main.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/js/contact.js"></script>
 </head>
 <body>
-	<div id="modal">
+	<div id="modal" class="hidden-phone">
 		<div id="submenu">
 		</div>
 	</div>
@@ -44,8 +47,8 @@
 						<a href="#"><li id="nav-home" class="first">Home</li></a>
 						<a href="#"><li id="nav-blog">Blog</li></a>
 						<!-- <a href="#"><li id="nav-portfolio">Portfolio</li></a>
-						<a href="#"><li id="nav-photos">Photos</li></a>
-						<a href="#"><li id="nav-contact">Contact</li></a> -->
+						<a href="#"><li id="nav-photos">Photos</li></a>-->
+						<a href="#"><li id="nav-contact">Contact</li></a>
 					</ul>
 				</nav>
 				<footer>
@@ -64,5 +67,8 @@
 	<footer class="main visible-phone">
 		<small>mmoscosa.com &copy; <?php echo date('Y');?></small>
 	</footer>
+	<script type="text/javascript">
+		$('a').tooltip();
+	</script>
 </body>
 </html>
