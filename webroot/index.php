@@ -57,6 +57,7 @@
  * Leaving this constant undefined will result in it being defined in Cake/bootstrap.php
  */
 	define('CAKE_CORE_INCLUDE_PATH',  DS . 'Users' . DS . 'mmoscosa' . DS . 'Sites' . DS . 'Resources' . DS . 'cakePHP_2.0' . DS . 'lib');
+    //define('CAKE_CORE_INCLUDE_PATH',  DS . 'home' . DS . 'mmoscosa' . DS . 'Commons' . DS . 'cakephp' . DS . 'lib');
 
 /**
  * Editing below this line should NOT be necessary.

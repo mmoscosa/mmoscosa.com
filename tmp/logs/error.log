@@ -3490,3 +3490,33 @@
 2013-02-14 23:06:08 Error: [MissingControllerException] Controller class Controller could not be found.
 #0 /Users/mmoscosa/Sites/mmoscosaV3/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-02-14 23:15:38 Error: [MissingControllerException] Controller class Controller could not be found.
+#0 /Users/mmoscosa/Sites/mmoscosaV3/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-14 23:15:38 Error: [MissingControllerException] Controller class Controller could not be found.
+#0 /Users/mmoscosa/Sites/mmoscosaV3/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-14 23:15:39 Error: [MissingControllerException] Controller class Controller could not be found.
+#0 /Users/mmoscosa/Sites/mmoscosaV3/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-14 23:16:07 Error: [MissingControllerException] Controller class Controller could not be found.
+#0 /Users/mmoscosa/Sites/mmoscosaV3/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-14 23:16:34 Error: [MissingControllerException] Controller class Controller could not be found.
+#0 /Users/mmoscosa/Sites/mmoscosaV3/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-14 23:16:34 Error: [MissingControllerException] Controller class Controller could not be found.
+#0 /Users/mmoscosa/Sites/mmoscosaV3/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-14 23:17:13 Error: [MissingControllerException] Controller class Controller could not be found.
+#0 /Users/mmoscosa/Sites/mmoscosaV3/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-14 23:17:55 Error: [MissingControllerException] Controller class Controller could not be found.
+#0 /Users/mmoscosa/Sites/mmoscosaV3/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-14 23:18:25 Error: [MissingControllerException] Controller class Controller could not be found.
+#0 /Users/mmoscosa/Sites/mmoscosaV3/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-14 23:18:25 Error: [MissingControllerException] Controller class Controller could not be found.
+#0 /Users/mmoscosa/Sites/mmoscosaV3/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
