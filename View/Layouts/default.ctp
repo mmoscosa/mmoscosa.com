@@ -16,6 +16,7 @@
 		echo $this->Html->css('main');
 		echo $this->Html->script('//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js');
 		echo $this->Html->script('bootstrap-tooltip');
+		echo $this->Html->script('bootstrap-popover');
 		echo $this->Html->script('main');
 
 		echo $this->fetch('meta');
@@ -37,7 +38,7 @@
 						$grav_url = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) );
 					?>
 					<img src="<?php echo $grav_url;?>" alt="gravayar" title="Martin Moscosa" class="img-circle avatar"/>
-					<h3>Martin Moscosa</h3>
+					<h1>Martin Moscosa</h1>
 					<p>Web Project Manager & Developer. <br/><span>Seeking new and challenging opportunities</span></p>
 					<ul id="social">
 						<li><a href="http://twitter.com/mmoscosa" target="_blank" title="Twitter mmoscosa"><i class="icon-twitter"></i></a></li>
@@ -51,8 +52,9 @@
 				<nav>
 					<ul>
 						<a href="#"><li id="nav-home" class="first">Home</li></a>
+						<a href="#"><li id="nav-portfolio">Portfolio</li></a>
 						<a href="#"><li id="nav-blog">Blog</li></a>
-						<!-- <a href="#"><li id="nav-portfolio">Portfolio</li></a>
+						<!--
 						<a href="#"><li id="nav-photos">Photos</li></a>-->
 						<a href="#"><li id="nav-contact">Contact</li></a>
 					</ul>

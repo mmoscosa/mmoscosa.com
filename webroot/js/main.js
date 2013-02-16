@@ -4,6 +4,7 @@ function resetNav() {
 	$('#nav-photos').removeClass('active');
 	$('#nav-portfolio').removeClass('active');
 	$('#nav-contact').removeClass('active');
+	$('#modal').hide();
 	$('#submenu').hide();
 }
 
@@ -16,9 +17,26 @@ function showModal() {
 	$('#modal').show();
 }
 
+function loadPortfolio() {
+	$('#submenu').load('/portfolio', function() {
+		$('.icon-spinner').hide();
+		showModal();
+		$('#submenu').show();
+	});
+}
+
 function loadBlog() {
 	$('#submenu').load('/blog', function() {
 		$('.icon-spinner').hide();
+		showModal();
+		$('#submenu').show();
+	});
+}
+
+function loadPhotos() {
+	$('#submenu').load('/photos', function() {
+		$('.icon-spinner').hide();
+		showModal();
 		$('#submenu').show();
 	});
 }
@@ -26,6 +44,7 @@ function loadBlog() {
 function loadContact() {
 	$('#submenu').load('/contact', function() {
 		$('.icon-spinner').hide();
+		showModal();
 		$('#submenu').show();
 	});
 }
@@ -44,7 +63,6 @@ $(document).ready(function() {
 		resetNav();
 		$(this).addClass('active');
 		$(this).append('<i class="icon-spinner icon-spin"></i>');
-		showModal();
 		loadBlog();
 		return false;
 	});
@@ -52,8 +70,21 @@ $(document).ready(function() {
 		resetNav();
 		$(this).addClass('active');
 		$(this).append('<i class="icon-spinner icon-spin"></i>');
-		showModal();
 		loadContact();
+		return false;
+	});
+	$('#nav-portfolio').click(function(){
+		resetNav();
+		$(this).addClass('active');
+		$(this).append('<i class="icon-spinner icon-spin"></i>');
+		loadPortfolio();
+		return false;
+	});
+	$('#nav-photos').click(function(){
+		resetNav();
+		$(this).addClass('active');
+		$(this).append('<i class="icon-spinner icon-spin"></i>');
+		loadPhotos();
 		return false;
 	});
 });

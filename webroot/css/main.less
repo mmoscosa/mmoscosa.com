@@ -3,13 +3,14 @@
 @import "components/font-awesome.less";
 @import "components/font-awesome-ie7.less";
 
-
+@linkColor: #0076b1;
 @primaryColour: @linkColor;
 @primaryDarkColour: darken(@linkColor, 15%);
 
 @import "components/navigation.less";
 @import "components/home.less";
 @import "components/blog.less";
+@import "components/portfolio.less";
 @import "components/contact.less";
 
 .well{
@@ -19,6 +20,17 @@
 h1, h2, h3, h4, h5, h6{
 	text-transform: uppercase;
 	font-weight: lighter;
+}
+
+h2{
+    font-size: 24.5px;
+    line-height: 40px;
+}
+
+h3{
+    font-size: 17.5px;
+    line-height: 30px;
+    margin: 10px 0;
 }
 .loading{
 	position: absolute;
@@ -42,7 +54,8 @@ h1, h2, h3, h4, h5, h6{
     	padding: 0;
     	color: black;
     	background: @wellBackground;
-    	width:30%;
+    	min-width:400px;
+        width:30%;
     	height: 100% !important;
     	border-left: 1px solid black;
         overflow-y: auto;

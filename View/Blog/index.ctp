@@ -10,7 +10,7 @@
 	<ul id="posts">
 		<?php foreach ($posts['Post'] as $key => $post):?>
 			<li>
-				<?php	echo $this->Html->link($post['title'], $post['url'], array('target'=>'_blank'));?>
+				<?php	echo $this->Html->link($post['title'], $post['url'], array('target'=>'_blank', 'title'=>$post['title']));?>
 			</li>
 		<?php endforeach; ?>
 	</ul>
