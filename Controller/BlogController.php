@@ -7,7 +7,6 @@ class BlogController extends AppController {
 	public $components = array('Posterous', 'Session');
 
     public function index() {
-        $this->layout = 'ajax';
         $posts = array();
     	$posterous = $this->posterous->get_posts();
         foreach ($posterous as $key => $post) {
@@ -17,5 +16,10 @@ class BlogController extends AppController {
         $total = count($posterous);
             $posts['Total'] = $total;
 		$this->set(compact('posts'));
+    }
+
+    public function ajax(){
+        $this->layout = 'ajax';
+        $this->index();
     }
 }

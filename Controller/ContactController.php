@@ -6,7 +6,6 @@ class ContactController extends AppController {
     public $components = array('Email');
 
 	public function index(){
-		$this->layout = 'ajax';
 		if(!empty($this->data)){
 			if(!empty($this->data['honey'])){
 				$this->Session->setFlash('Please try again and check input provided.');
@@ -32,5 +31,10 @@ class ContactController extends AppController {
 					$this->redirect(array('controller' => 'pages', 'action' => 'display'));
 				}
 		}
+	}
+
+	public function ajax(){
+		$this->layout = 'ajax';
+		$this->index();
 	}
 }
