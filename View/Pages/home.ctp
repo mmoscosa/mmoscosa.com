@@ -1,5 +1,5 @@
 <div id="home">
-	<div id="cv">
+	<div id="cv" class="visible-desktop">
 		<a href="http://dl.dropbox.com/u/54926/CV/Martin%20Moscosa%20CV%20%5BEnglish%5D.pdf" target="_blank" title="CV" class="btn btn-danger"><i class="icon-download-alt"></i> CV (PDF)</a>
 		<a href="http://vizualize.me/mmoscosa#.URrin1rfzwM" target="_blank" title="Infographic" class="btn">CV (Infographic)</a>
 	</div>
@@ -17,7 +17,7 @@
 		</div>
 	</div>
 
-	<div class="row-fluid">
+	<div class="row-fluid visible-desktop" >
 		<h2>My Passions</h2>
 		<div class="span6 passion metro photography">
 			<i class="icon-camera"></i>

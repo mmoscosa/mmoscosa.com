@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	$("a.responsive-nav").pageslide({modal:true});
 	var content, home, blog, portfolio, photos, contact, modal, submenu, spinner, spinnerAppend, mouse_is_inside;
 	content = $('#content-for-layout');
 	home = $('#nav-home');
@@ -12,6 +13,7 @@ $(document).ready(function() {
 		spinner = $('.icon-spinner');
 		spinnerAppend = '<i class="icon-spinner icon-spin"></i>';
 
+	$('.dropdown-toggle').dropdown();
 	function loadHome() {
 		modal.hide();
 		home.addClass('active');

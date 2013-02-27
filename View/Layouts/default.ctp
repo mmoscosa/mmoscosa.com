@@ -13,32 +13,77 @@
 	<?php
 		echo $this->Html->meta('icon');
 
+		echo $this->Html->css('pageslide');
 		echo $this->Html->css('main');
 		echo $this->Html->script('//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js');
+		echo $this->Html->script('bootstrap-dropdown');
 		echo $this->Html->script('bootstrap-tooltip');
 		echo $this->Html->script('bootstrap-popover');
 		echo $this->Html->script('bootstrap-transition');
 		echo $this->Html->script('main-ck');
-
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
+
 </head>
 <body>
-	<div id="modal" class="hidden-phone">
+	<div id="modal">
 		<div id="submenu">
 		</div>
 	</div>
+	<div id="responsive-menu">
+		<div class="navbar navbar-inverse" id="navigation-responsive">
+		  <div class="navbar-inner">
+		    <div class="container">
+		    	<?php
+					$email = "mmoscosa@gmail.com";
+					$grav_url = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) );
+				?>
+				<img src="<?php echo $grav_url;?>" alt="gravatar" title="Martin Moscosa" class="img-rounded"/>
+		    	<a class="brand" href="#">Martin Moscosa</a>
+		    </div>
+		  </div>
+		</div>
+
+		<nav>
+			<ul>
+				<a href="/"><li id="nav-home-responsive" class="first"><i class="icon-home"></i>Home</li></a>
+				<a href="/portfolio"><li id="nav-portfolio-responsive"><i class="icon-briefcase"></i>Portfolio</li></a>
+				<!-- <a href="#"><li id="nav-photos">Photos</li></a> -->
+				<a href="/blog"><li id="nav-blog-responsive"><i class="icon-comment"></i>Blog</li></a>
+				<a href="/contact"><li id="nav-contact-responsive"><i class="icon-envelope-alt"></i>Contact</li></a>
+			</ul>
+		</nav>
+	</div>
+	<div class="navbar navbar-fixed-top hidden-desktop" id="responsiv-nav">
+	  <div class="navbar-inner">
+	    <div class="container">
+
+	      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+	      <a class="btn btn-navbar responsive-nav left" href="#responsive-menu">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </a>
+	      <a class="btn right dropdown-toggle"  data-toggle="dropdown" id="cv-responsive" href="#"><i class="icon-file"></i></a>
+	      <ul id="cv" class="dropdown-menu" role="menu" >
+                  <li><a role="menuitem" tabindex="-1" href="http://dl.dropbox.com/u/54926/CV/Martin%20Moscosa%20CV%20%5BEnglish%5D.pdf"><i class="icon-download-alt"></i> CV (PDF)</a></li>
+                  <li class="divider"></li>
+                  <li><a role="menuitem" tabindex="-1" href="http://vizualize.me/mmoscosa#.URrin1rfzwM">CV (Infographic)</a></li>
+                </ul>
+	    </div>
+	  </div>
+	</div>
 	<div class="container-fluid">
 		<div class="row-fluid">
-			<div class="span3 well hidden-phone" id="navigation">
+			<div class="span3 well visible-desktop" id="navigation">
 				<div id="idCard">
 					<?php
 						$email = "mmoscosa@gmail.com";
 						$grav_url = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) );
 					?>
-					<img src="<?php echo $grav_url;?>" alt="gravayar" title="Martin Moscosa" class="img-circle avatar"/>
+					<img src="<?php echo $grav_url;?>" alt="gravatar" title="Martin Moscosa" class="img-circle avatar"/>
 					<h1>Martin Moscosa</h1>
 					<p>Web Project Manager & Developer. <!-- <br/><span>Seeking new and challenging opportunities</span> --></p>
 					<ul id="social">
@@ -74,7 +119,7 @@
 			</div>
 		</div>
 	</div>
-	<footer class="main visible-phone">
+	<footer class="main hidden-desktop">
 		<small>mmoscosa.com &copy; <?php echo date('Y');?></small>
 	</footer>
 	<script type="text/javascript">
@@ -92,6 +137,16 @@
 	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
 
+	</script>
+	<script src="/js/jquery.pageslide.min.js"></script>
+	<script>
+		var responsiveMenu,cvButton;
+		cvButton = $('#cv-responsive');
+		responsiveMenu = $("a.responsive-nav");
+    	responsiveMenu.click(function(){
+    		cvButton.toggle();
+    	});
+    	responsiveMenu.pageslide({modal:true});
 	</script>
 	<?php echo $this->element('sql_dump'); ?>
 </body>

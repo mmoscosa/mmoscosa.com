@@ -1569,6 +1569,13 @@ ul.icons{text-indent:-1.5em;margin-left:3em;}
 #navigation nav ul li i{float:right;margin-right:20px;color:#333333;}
 #navigation nav ul a:hover{text-decoration:none;}
 #navigation footer{position:absolute;bottom:0;}
+#pageslide{max-width:90%;padding:0;font-size:14px;}#pageslide #navigation-responsive .navbar-inner{height:40px;padding:5px;}#pageslide #navigation-responsive .navbar-inner img{height:40px;border:1px solid black;float:left;margin:0 7px;}
+#pageslide #navigation-responsive .navbar-inner .brand{font-size:16px;margin-left:5px;}
+#pageslide nav{padding:0;margin:-20px 0 0 0;}#pageslide nav ul{background:white;border:1px solid #333333;margin:0;list-style:none;}#pageslide nav ul li{padding:10px 10px;border-bottom:1px dotted #555555;}#pageslide nav ul li.first{border-top:1px dotted #555555;}
+#pageslide nav ul li.active{border-right:15px solid #0076b1;}
+#pageslide nav ul li:hover{background:#0076b1;color:#ffffff;}#pageslide nav ul li:hover i{color:#eeeeee;}
+#pageslide nav ul li i{margin-right:10px;color:#333333;}
+#pageslide nav ul a:hover{text-decoration:none;}
 #home #cv{float:right;margin-top:-1px;margin-right:12px;}#home #cv .btn{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;margin-left:12px;}
 #home #about{line-height:1.9em;}
 #home #about #skills{padding:20px 0;}#home #about #skills .alt{border-top:1px solid #eeeeee;}#home #about #skills .alt h3{text-align:right;}
@@ -1607,7 +1614,7 @@ ul.icons{text-indent:-1.5em;margin-left:3em;}
 #portfolio dl dd ul li ul.technologies li.mysql{background-color:#212121;background-image:-moz-linear-gradient(top, #262626, #1a1a1a);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#262626), to(#1a1a1a));background-image:-webkit-linear-gradient(top, #262626, #1a1a1a);background-image:-o-linear-gradient(top, #262626, #1a1a1a);background-image:linear-gradient(to bottom, #262626, #1a1a1a);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff262626', endColorstr='#ff1a1a1a', GradientType=0);}
 #portfolio dl dd ul li ul.technologies li.Postgresql{background-color:#2f95bf;background-image:-moz-linear-gradient(top, #04aef4, #6f6f6f);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#04aef4), to(#6f6f6f));background-image:-webkit-linear-gradient(top, #04aef4, #6f6f6f);background-image:-o-linear-gradient(top, #04aef4, #6f6f6f);background-image:linear-gradient(to bottom, #04aef4, #6f6f6f);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff04aef4', endColorstr='#ff6f6f6f', GradientType=0);}
 #portfolio dl dd ul li ul.technologies li.mobile{background-color:#315731;background-image:-moz-linear-gradient(top, #2f6f2f, #333333);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#2f6f2f), to(#333333));background-image:-webkit-linear-gradient(top, #2f6f2f, #333333);background-image:-o-linear-gradient(top, #2f6f2f, #333333);background-image:linear-gradient(to bottom, #2f6f2f, #333333);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2f6f2f', endColorstr='#ff333333', GradientType=0);}
-#contact{width:100% !important;padding:25px;}#contact input,#contact textarea{width:300px;}#contact input#submit-button,#contact textarea#submit-button{float:right;width:120px;margin-right:75px;}
+#contact{width:100% !important;padding:25px;}#contact input,#contact textarea{width:200px;}#contact input#submit-button,#contact textarea#submit-button{float:right;width:120px;margin-right:75px;}
 #contact input#honey,#contact textarea#honey{display:none;}
 #contact #req-field-desc{color:#555555;text-transform:uppercase;font-size:80%;}
 #contact form{padding-top:60px;}
@@ -1619,3 +1626,8 @@ h2{font-size:24.5px;line-height:40px;}
 h3{font-size:17.5px;line-height:30px;margin:10px 0;}
 .loading{position:absolute;top:50%;left:50%;color:#555555;opacity:0.9;}
 #modal{display:none;position:fixed;top:0px;left:23.076923076923077%;width:100%;height:100%;z-index:1000;background:rgba(0, 0, 0, 0.7);}#modal #submenu{position:relative;padding:0;color:black;background:#f5f5f5;min-width:400px;width:30%;height:100% !important;border-left:1px solid black;overflow-y:auto;overflow-x:hidden;}
+#responsive-menu{display:none;}
+#responsiv-nav ul#cv{position:absolute;top:50px;}#responsiv-nav ul#cv li{text-align:right;}
+#responsiv-nav .dropdown-menu{float:right;left:auto;right:0;}
+.navbar .right{float:right;}
+.navbar .left{float:left;}

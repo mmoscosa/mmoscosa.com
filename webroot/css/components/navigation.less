@@ -70,3 +70,61 @@
 		bottom: 0;
 	}
 }
+
+
+#pageslide{
+	max-width: 90%;
+	@pageslideBg: #333;
+	padding: 0;
+	font-size: 14px;
+	#navigation-responsive{
+		.navbar-inner{
+			height: 40px;
+			padding: 5px;
+
+			img{
+				height: 40px;
+				border: 1px solid black;
+				float: left;
+				margin: 0 7px;
+			}
+			.brand{
+				font-size: 16px;
+				margin-left: 5px;
+			}
+		}
+	}
+    nav{
+    	padding: 0;
+    	margin: -20px 0 0 0;
+		ul{
+    	background: white;
+    	border: 1px solid @pageslideBg;
+			margin: 0;
+			list-style: none;
+			li{
+				padding: 10px 10px;
+				border-bottom: 1px dotted @gray;
+				&.first{
+					border-top: 1px dotted @gray;
+				}
+				&.active{border-right: 15px solid @primaryColour;}
+				&:hover{
+					background: @primaryColour;
+					color: @white;
+					i{
+						color: @grayLighter;
+					}
+				}
+				i{
+					//float: right;
+					margin-right: 10px;
+					color: @grayDark;
+				}
+			}
+			a:hover{
+				text-decoration: none;
+			}
+		}
+	}
+}
