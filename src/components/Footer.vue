@@ -69,6 +69,9 @@
                             © {{ new Date() | moment("YYYY") }} Martin Moscosa
                         </a>
                     </li>
+                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                        [![Netlify Status](https://api.netlify.com/api/v1/badges/f67e33df-0cfe-40bb-9b5d-074221926336/deploy-status)](https://app.netlify.com/sites/mmoscosa/deploys)
+                    </li>
                 </ul>
             </div>
         </div>
