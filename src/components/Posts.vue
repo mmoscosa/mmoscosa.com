@@ -8,7 +8,7 @@
 				<div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
 			</div>
 	
-			<div class="container mx-auto flex flex-wrap pt-4 pb-12" >
+			<div class="container mx-auto flex flex-wrap pt-4 pb-12">
 				<div class="clickeable w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink" v-for="post in $static.posts.edges" :key="post.node.id" v-on:click="goToPost(post.node.url)">
 					<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
 						<div class="flex flex-wrap no-underline hover:no-underline">
@@ -16,7 +16,9 @@
 								{{post.node.title | truncate(30, '...')}}
 							</div>
 							<p class="text-gray-800 text-base px-6 mb-5">
-								<truncate clamp="Read more" :length="255" less="Show Less" type="html" :text="post.node.item.content_encoded"></truncate>
+								{{parsedPost(post.node.item.content_encoded) | truncate(144, '...')}}
+								<!-- <truncate clamp="" :length="255" less="Show Less" type="html" :text="post.node.item.content_encoded"></truncate>  -->
+								<small>«Read More»</small>
 							</p>
 						</div>
 					</div>
@@ -87,17 +89,18 @@
 </static-query>
 
 <script>
-import truncate from 'vue-truncate-collapsed';
+const htmlToText = require('html-to-text')
 	export default {
-	components: {
-    truncate
-  },
+		computed: {},
 		methods: {
+			parsedPost: function(unparsedPost) {
+				return htmlToText.fromString(unparsedPost)
+			},
 			goToSource: function(url) {
 				var win = window.open(url, '_blank');
 				win.focus();
 			},
-goToPost: function(url) {
+			goToPost: function(url) {
 				var win = window.open(url);
 				win.focus();
 			}
@@ -106,7 +109,7 @@ goToPost: function(url) {
 </script>
 
 <style>
-.clickeable{
-	cursor:pointer;
-}
+	.clickeable {
+		cursor: pointer;
+	}
 </style>
