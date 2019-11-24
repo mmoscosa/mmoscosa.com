@@ -8,15 +8,18 @@ const tailwindcss = require('tailwindcss')
 
 module.exports = {
   siteName: 'Martin Moscosa',
+  siteUrl: 'https://www.mmoscosa.com',
+  siteDescription: 'Martin Moscosa personal website',
+  titleTemplate: 'Martin Moscosa - %s',
   plugins: [
     {
       use: '@gridsome/source-contentful',
       options: {
+        host: 'cdn.contentful.com',
+        typename: 'Contentful',
         space: process.env.CONTENTFUL_SPACE,
         accessToken: process.env.CONTENTFUL_TOKEN,
-        host: 'cdn.contentful.com',
-        environment: process.env.CONTENTFUL_ENVIRONMENT,
-        typename: 'Contentful'
+        environment: process.env.CONTENTFUL_ENVIRONMENT
       }
     },
     {

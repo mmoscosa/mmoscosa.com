@@ -17,7 +17,7 @@
 							{{experience.node.title}}
 						</div>
 						<p class="text-gray-800 text-base px-6 mb-5">
-							<truncate clamp=" - Read more" :length="300" less="Show Less" type="text" :text="experience.node.description"></truncate>
+							{{experience.node.description | truncate(300, '...')}}
 						</p>
 					</div>
 				</div>
@@ -109,14 +109,9 @@
 
 
 <script>
-	import truncate from 'vue-truncate-collapsed';
 	export default {
-		components: {
-			truncate
-		},
 		data: function() {
 			return {
-				hola: 'hello'
 			}
 		},
 		methods: {
