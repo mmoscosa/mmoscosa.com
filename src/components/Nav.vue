@@ -46,7 +46,7 @@ export default {
 	props:['siteName'],
 	methods:{
 		getCV: function(){
-			var url = 'http://bit.ly/cv-mmoscosa';
+			var url = 'https://drive.google.com/file/d/1-q8gPO_PQbAEfhjRpVvJfMJfJRNb6PgY/view?usp=drivesdk';
 			var win = window.open(url, '_blank');
   		win.focus();
 		}
