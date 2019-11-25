@@ -9,7 +9,7 @@ const tailwindcss = require('tailwindcss')
 module.exports = {
   siteName: 'Martin Moscosa',
   siteUrl: 'https://www.mmoscosa.com',
-  siteDescription: 'Martin Moscosa personal website',
+  siteDescription: 'Martin Moscosa',
   titleTemplate: 'Martin Moscosa - %s',
   plugins: [
     {
