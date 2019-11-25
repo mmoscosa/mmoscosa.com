@@ -46,7 +46,7 @@ export default {
 	props:['siteName'],
 	methods:{
 		getCV: function(){
-			var url = 'https://drive.google.com/file/d/1kUvnLkWRwIGNPzEYeVmzhcRmbhii82UK/view?usp=drivesdk';
+			var url = 'https://drive.google.com/file/d/1rhPDOYvo9-xFxnVKrhsRImZOpzo7U56j/view?usp=drivesdk';
 			var win = window.open(url, '_blank');
   		win.focus();
 		}
