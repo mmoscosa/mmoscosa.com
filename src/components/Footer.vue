@@ -7,7 +7,7 @@
 				
 			<div class="flex-1 mb-6">
 			
-				<a class="text-orange-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"  href="#"> 
+				<a class="text-orange-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"  href="/"> 
 					Martin Moscosa
 				</a>
 			</div>
