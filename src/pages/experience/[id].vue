@@ -1,6 +1,10 @@
 <template>
   <Layout>
-    <section v-for="experience in $page.allExperiences.edges" :key="experience.node.id" v-if="experience.node.id === currentExperience">
+    <section 
+      v-for="experience in $page.allExperiences.edges" 
+      :key="experience.node.id"
+      v-show="experience.node.id === currentExperience"
+    >
       <section class="bg-white  py-8 px-10 mt-10" id="breadcrumb">
         <ul class="flex">
           <li class="mr-6">
