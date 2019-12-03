@@ -15,7 +15,7 @@
 				<div class="w-full sm:w-1/2 p-6">
 					<div class="embed-responsive aspect-ratio-16">
 						<iframe  
-							src="https://www.youtube.com/embed/QPHAZFunQ5g" 
+							src="https://www.youtube.com/embed/XixvLyNjw98" 
 							frameborder="0" 
 							allow="accelerometer; 
 							autoplay; 

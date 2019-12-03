@@ -9,10 +9,10 @@
 </template>
 
 <script>
-  import Hero from '~/components/Hero.vue'
-  import About from '~/components/About.vue'
-  import Posts from '~/components/Posts.vue'
-  import Experience from '~/components/Experience.vue'
+  import Hero from '~/components/index/Hero.vue'
+  import About from '~/components/index/About.vue'
+  import Posts from '~/components/index/Posts.vue'
+  import Experience from '~/components/index/Experience.vue'
   import CallToAction from '~/components/CallToAction.vue'
   
   export default {

@@ -12,8 +12,8 @@
 			<button 
 				id="navAction" 
 				class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75"
-				v-on:click="getCV()">
-				CV
+				v-on:click="contact()">
+				✉️
 				</button>
 		</div>
 
@@ -30,8 +30,8 @@
 			<button 
 				id="navAction" 
 				class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75"
-				v-on:click="getCV()">
-				See my CV
+				v-on:click="contact()">
+				Contact me ✉️
 				</button>
 		</div>
 	</div>
@@ -45,8 +45,9 @@
 export default {
 	props:['siteName'],
 	methods:{
-		getCV: function(){
-			var url = 'https://drive.google.com/file/d/1rhPDOYvo9-xFxnVKrhsRImZOpzo7U56j/view?usp=drivesdk';
+		contact: function(){
+			// var url = 'https://drive.google.com/file/d/1rhPDOYvo9-xFxnVKrhsRImZOpzo7U56j/view?usp=drivesdk';
+			var url = 'mailto:martin@mmoscosa.com'
 			var win = window.open(url, '_blank');
   		win.focus();
 		}

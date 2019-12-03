@@ -7,8 +7,12 @@
 				<div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
 			</div>
 	
-			<div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink" v-for="experience in $static.experience.edges" :key="experience.node.id">
-				<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+			<div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink clickeable" 
+					v-for="experience in $static.experience.edges" 
+					:key="experience.node.id"
+					v-on:click="goToExperience(experience.node.id)"
+			>
+				<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow" >
 					<div class="flex flex-wrap no-underline hover:no-underline">
 						<p class="w-full text-gray-600 text-xs md:text-sm px-6">
 							<g-image class="w-32 py-2 " :src="experience.node.company.logo.file.url" alt="experience.company.name" />
@@ -17,8 +21,10 @@
 							{{experience.node.title}}
 						</div>
 						<p class="text-gray-800 text-base px-6 mb-5">
-							{{experience.node.description | truncate(300, '...')}}
+							{{parsedContent(experience.node.description) | truncate(300, '...')}} 
+							<span v-if="experience.node.description.length>300"><br/>&#171;<small>Read More</small>&#187;</span>
 						</p>
+						
 					</div>
 				</div>
 				<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
@@ -65,6 +71,7 @@
   experience:allContentfulExperience (sortBy: "updatedAt", order:DESC){
     edges{
       node{
+				id,
         title,
         description,
         updatedAt,
@@ -109,14 +116,23 @@
 
 
 <script>
+const htmlToText = require('html-to-text')
 	export default {
 		data: function() {
 			return {
 			}
 		},
 		methods: {
+			parsedContent: function(unparsedContent) {
+				return htmlToText.fromString(unparsedContent)
+			},
 			goToSource: function(url) {
 				var win = window.open(url, '_blank');
+				win.focus();
+			},
+			goToExperience: function(id) {
+				var url = '/experience/'+id
+				var win = window.open(url, "_self");
 				win.focus();
 			}
 		}

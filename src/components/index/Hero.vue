@@ -13,11 +13,11 @@
 						Martin Moscosa
 					</h1>
 					<p class="leading-normal text-2xl mb-8">
-						Startup Grind Guadalajara Chapter Director and Former Wizeline Academy Director
+						Leader in the tech and startup community and product manager.
 					</p>
 	
-					<button id="call-to-action" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg" v-on:click="calendly()">
-						Schedule a Call
+					<button id="call-to-action" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg" v-on:click="seeCV()">
+						See my CV
 					</button>
 	
 				</div>
@@ -50,8 +50,9 @@
 <script>
 	export default {
 		methods: {
-			calendly: function() {
-				window.location = "https://calendly.com/mmoscosa/quick-meeting";
+			seeCV: function() {
+				var url = 'https://drive.google.com/file/d/1Qd7_J8E67J71pL9RNprL7e5UDIJ_v3CE/view?usp=drivesdk';
+				window.location = url;
 			}
 		},
 	}
