@@ -7,13 +7,6 @@
 const tailwindcss = require('tailwindcss')
 
 module.exports = {
-  afterBuild({ redirects }) {
-    for (const rule of redirects) {
-      rule.from - '/experience/:id'
-      rule.to - '/experience/_id.html'
-      rule.status - 200
-    }
-  },
   siteName: 'Martin Moscosa',
   siteUrl: 'https://www.mmoscosa.com',
   siteDescription: 'Martin Moscosa',

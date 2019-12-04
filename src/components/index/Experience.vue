@@ -131,7 +131,7 @@ const htmlToText = require('html-to-text')
 				win.focus();
 			},
 			goToExperience: function(id) {
-				var url = '/experience/'+id
+				var url = '/experience?id='+id
 				var win = window.open(url, "_self");
 				win.focus();
 			}
