@@ -1,7 +1,8 @@
 <template>
   <Layout>
-    <section v-for="experience in $page.allExperiences.edges" :key="experience.node.id">
+    <section class="bg-white" v-for="experience in $page.allExperiences.edges" :key="experience.node.id">
       <span v-if="isCurrentExperience(experience.node.id)">
+        <div class="container max-w-10xl mx-auto m-8">
         <section class="bg-white  py-8 px-10 mt-10" id="breadcrumb">
           <ul class="flex">
             <li class="mr-6">
@@ -18,17 +19,20 @@
             </li>
           </ul>
         </section>
-        <div class="flex mb-4 bg-white">
-          <div class="w-3/5 p-2 bg-white">
+      
+        <div class="flex flex-wrap mb-4 bg-white">
+          <div class="w-full p-2 bg-white sm:w-3/5">
             <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">{{experience.node.title}}</h1>
             <p class="text-gray-800 text-base px-6 mb-5" v-html="experience.node.description"></p>
           </div>
-          <div class="w-2/5 p-4 bg-white">
+          <div class="w-full p-4 bg-white sm:w-2/5">
             <CompanyAbout :company="experience.node.company" />
           </div>
         </div>
+        </div>
         <Highlights :highlights="experience.node.highlights" />
       </span>
+      
     </section>
     <CallToAction />
   </Layout>
