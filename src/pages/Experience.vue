@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <section v-for="experience in $page.allExperiences.edges" :key="experience.node.id">
-      <span v-show="experience.node.id == currentExperience.id">
+      <span v-if="isCurrentExperience(experience.node.id)">
         <section class="bg-white  py-8 px-10 mt-10" id="breadcrumb">
           <ul class="flex">
             <li class="mr-6">
@@ -73,22 +73,31 @@
   import CompanyAbout from '~/components/experience/CompanyAbout.vue'
   import Highlights from '~/components/experience/Highlights.vue'
   import CallToAction from '~/components/CallToAction.vue'
+  
   export default {
     metaInfo: {
-      title: 'Experience'
+      title: 'Experience',
     },
     data() {
       return {
         currentExperience: null
       }
     },
+    computed: {},
     methods: {
+      isCurrentExperience: function(current) {
+        var isCurrent = false
+        if (this.currentExperience == current) {
+          isCurrent = true
+        }
+        return isCurrent
+      },
       parsedContent: function(unparsedContent) {
         return htmlToText.fromString(unparsedContent)
-      },
+      }
     },
-    mounted() {
-      this.currentExperience = this.$route.query
+    async mounted() {
+      this.currentExperience = this.$route.query.id
     },
     components: {
       CompanyAbout,
@@ -97,9 +106,3 @@
     }
   }
 </script>
-
-<style>
-  .home-links a {
-    margin-right: 1rem;
-  }
-</style>
