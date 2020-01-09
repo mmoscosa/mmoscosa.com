@@ -1,14 +1,11 @@
-# Default starter for Gridsome
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f67e33df-0cfe-40bb-9b5d-074221926336/deploy-status)](https://app.netlify.com/sites/mmoscosa/deploys)
 
-This is the project you get when you run `gridsome create new-project`.
+# Martin Moscosa Website
 
-### 1. Install Gridsome CLI tool if you don't have
+Martin Moscosa Personal website built using gridstome
 
-`npm install --global @gridsome/cli`
+> https://mmoscosa.com
 
-### 2. Create a Gridsome project
+## License
 
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+[ISC](https://choosealicense.com/licenses/isc/)
