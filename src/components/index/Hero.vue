@@ -95,7 +95,7 @@ export default {
   methods: {
     seeCV: function() {
       var url =
-        'https://drive.google.com/file/d/1Qd7_J8E67J71pL9RNprL7e5UDIJ_v3CE/view?usp=drivesdk'
+        'https://tiny.mmoscosa.com/CV'
       window.location = url
     }
   }
