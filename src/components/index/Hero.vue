@@ -94,7 +94,7 @@
 export default {
   methods: {
     seeCV: function() {
-        'https://tiny.mmoscosa.com/CV'
+      var url = 'https://tiny.mmoscosa.com/CV'
       window.location = url
     }
   }
