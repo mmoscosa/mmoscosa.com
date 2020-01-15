@@ -30,7 +30,7 @@
             See a quick version of my CV as NPM package
             <br />by running the following in your terminal
             <span class="text-xs">(NPM required)</span>
-            <span class="font-mono block terminal">
+            <span class="font-mono block terminal z-50">
               <span id="prompt">$</span>
               <span id="command"> npx</span>
               <span id="variable"> mmoscosa-cv</span>
@@ -94,8 +94,7 @@
 export default {
   methods: {
     seeCV: function() {
-      var url =
-        'https://drive.google.com/file/d/1Qd7_J8E67J71pL9RNprL7e5UDIJ_v3CE/view?usp=drivesdk'
+      var url = 'https://tiny.mmoscosa.com/CV'
       window.location = url
     }
   }

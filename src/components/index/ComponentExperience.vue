@@ -95,7 +95,7 @@
       }
     }
   },
-  press: allContentfulPress (sortBy: "published", order:ASC){
+  press: allContentfulPress (sortBy: "published", order:DESC){
     edges{
       node{
 				id,
