@@ -63,7 +63,7 @@
         <tbody>
           <tr
             class="clickeable"
-            v-for="book in $static.books.edges"
+            v-for="book in computedBooks"
             :key="book.node.id"
             v-on:click="goToSource(book.node.link)"
           >
@@ -77,6 +77,14 @@
           </tr>
         </tbody>
       </table>
+      <a
+        href="#"
+        class="w-full my-2 text font-thin leading-tight text-center text-gray-800"
+        v-on:click="toggleMore()"
+        v-show="$static.books.edges.length > booksLimit"
+      >
+        Show {{ more === true ? 'less' : 'more' }}
+      </a>
     </div>
   </section>
 </template>
@@ -120,8 +128,25 @@
 <script>
 const htmlToText = require('html-to-text')
 export default {
-  computed: {},
+  data: function() {
+    return {
+      more: false,
+      booksLimit: 5
+    }
+  },
+  computed: {
+    computedBooks: function() {
+      if (this.more) {
+        return this.$static.books.edges
+      } else {
+        return this.$static.books.edges.slice(0, this.booksLimit)
+      }
+    }
+  },
   methods: {
+    toggleMore: function() {
+      this.more = !this.more
+    },
     parsedPost: function(unparsedPost) {
       return htmlToText.fromString(unparsedPost)
     },
