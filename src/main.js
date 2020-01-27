@@ -3,14 +3,14 @@
 
 import './assets/css/global.css'
 import DefaultLayout from '~/layouts/Default.vue'
-
+import VueTruncate from 'vue-truncate-filter'
+import VueYouTubeEmbed from 'vue-youtube-embed'
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
   Vue.use(require('vue-moment'))
-  var VueTruncate = require('vue-truncate-filter')
   Vue.use(VueTruncate)
-   
+  Vue.use(VueYouTubeEmbed)
   // Add a meta tag
   head.meta.push(
     {
@@ -23,7 +23,8 @@ export default function(Vue, { router, head, isClient }) {
     },
     {
       name: 'og:image',
-      content: 'https://media.licdn.com/dms/image/C4E03AQHpaBMnDPlMuw/profile-displayphoto-shrink_200_200/0?e=1580342400&v=beta&t=6UUfAk8nRaciP4BRks4CEHMTC4xgaSxTT5-c2TjBSXU'
+      content:
+        'https://media.licdn.com/dms/image/C4E03AQHpaBMnDPlMuw/profile-displayphoto-shrink_200_200/0?e=1580342400&v=beta&t=6UUfAk8nRaciP4BRks4CEHMTC4xgaSxTT5-c2TjBSXU'
     },
     {
       name: 'og:url',
@@ -44,6 +45,6 @@ export default function(Vue, { router, head, isClient }) {
     {
       name: 'twitter:summary',
       content: 'https://www.mmoscosa.com'
-    },
+    }
   )
 }

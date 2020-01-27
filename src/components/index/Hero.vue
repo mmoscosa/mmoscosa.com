@@ -16,7 +16,7 @@
             Martin Moscosa
           </h1>
           <p class="leading-normal text-2xl mb-8">
-            Leader in the tech and startup community and product manager.
+            Leader and connector in the tech and startup scene
           </p>
 
           <button

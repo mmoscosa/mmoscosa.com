@@ -78,7 +78,7 @@
       <table class="table-auto w-full text-gray-900">
         <tbody>
           <tr
-            class="clickeable"
+            class="clickeable  transition-fade"
             v-for="edge in computedPress"
             :key="edge.node.id"
             v-on:click="goToSource(edge.node.link)"
@@ -201,6 +201,9 @@ export default {
 </script>
 
 <style>
+.transition-fade {
+  transition: opacity 0.5s;
+}
 .clickeable {
   cursor: pointer;
 }
