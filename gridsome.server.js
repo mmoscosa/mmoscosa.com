@@ -16,12 +16,27 @@ module.exports = function(api) {
       'https://medium.com/feed/@mmoscosa'
     )
 
-    const collection = actions.addCollection({
+    const entries = await rssParser.parseURL(
+      'https://www.youtube.com/feeds/videos.xml?channel_id=UCfZfBpohRrYqLZEHymDNc8g'
+    )
+
+    const postCollection = actions.addCollection({
       typeName: 'BlogPosts'
     })
 
+    const vidCollection = actions.addCollection({
+      typeName: 'Videos'
+    })
+
+    const values = Object.keys(entries).map(i => entries[i])
+    for (const value of values) {
+      vidCollection.addNode({
+        item: value
+      })
+    }
+
     for (const item of items) {
-      collection.addNode({
+      postCollection.addNode({
         title: item.title,
         url: item.link,
         created: item.pubDate,
