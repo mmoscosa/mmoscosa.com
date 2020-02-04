@@ -38,6 +38,10 @@ export default {
 </script>
 
 <style>
+html,
+body {
+  overflow-x: hidden;
+}
 .fade-enter-active {
   transition: opacity 0.5s;
 }
