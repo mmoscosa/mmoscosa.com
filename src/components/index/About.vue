@@ -23,6 +23,10 @@
           <div class="embed-responsive aspect-ratio-16">
             <youtube video-id="XixvLyNjw98"></youtube>
           </div>
+
+          <section class="pt-6">
+            <lastTweet />
+          </section>
         </div>
       </div>
 
@@ -72,9 +76,14 @@ query{
 </static-query>
 <script>
 import youtubeVideos from '~/components/index/Youtube.vue'
+import lastTweet from '~/components/index/lastTweet.vue'
 
 export default {
+  data: function() {
+    return {}
+  },
   components: {
+    lastTweet,
     youtubeVideos
   }
 }

@@ -16,23 +16,50 @@ module.exports = function(api) {
       'https://medium.com/feed/@mmoscosa'
     )
 
-    const entries = await rssParser.parseURL(
+    const tweets = await rssParser.parseURL(
+      'https://twitrss.me/twitter_user_to_rss/?user=mmoscosa'
+    )
+
+    const videos = await rssParser.parseURL(
       'https://www.youtube.com/feeds/videos.xml?channel_id=UCfZfBpohRrYqLZEHymDNc8g'
     )
+
+    const twitterCollection = actions.addCollection({
+      typeName: 'twitterPosts'
+    })
 
     const postCollection = actions.addCollection({
       typeName: 'BlogPosts'
     })
 
-    const vidCollection = actions.addCollection({
-      typeName: 'Videos'
+    const videoCollection = actions.addCollection({
+      typeName: 'youTubeVideos'
     })
 
-    const values = Object.keys(entries).map(i => entries[i])
-    for (const value of values) {
-      vidCollection.addNode({
-        item: value
-      })
+    for (let twKey in tweets) {
+      if (tweets.hasOwnProperty(twKey)) {
+        twitterCollection.addNode({
+          items: tweets['items'],
+          feedUrl: tweets['feedUrl'],
+          image: tweets['image'],
+          title: tweets['title'],
+          link: tweets['link'],
+          description: tweets['description'],
+          language: tweets['language'],
+          ttl: tweets['ttl']
+        })
+      }
+    }
+
+    for (let ytKey in videos) {
+      if (videos.hasOwnProperty(ytKey)) {
+        videoCollection.addNode({
+          link: videos['videos'],
+          items: videos['items'],
+          title: videos['title'],
+          feedUrl: videos['feedUrl']
+        })
+      }
     }
 
     for (const item of items) {
