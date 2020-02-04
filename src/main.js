@@ -5,12 +5,28 @@ import './assets/css/global.css'
 import DefaultLayout from '~/layouts/Default.vue'
 import VueTruncate from 'vue-truncate-filter'
 import VueYouTubeEmbed from 'vue-youtube-embed'
+
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { config, library } from '@fortawesome/fontawesome-svg-core'
+import {
+  faGithub,
+  faTwitter,
+  faMedium
+} from '@fortawesome/free-brands-svg-icons'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+
+config.autoAddCss = false
+library.add(faGithub, faTwitter, faMedium)
+
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
   Vue.use(require('vue-moment'))
   Vue.use(VueTruncate)
   Vue.use(VueYouTubeEmbed)
+
+  Vue.component('font-awesome', FontAwesomeIcon)
+
   // Add a meta tag
   head.meta.push(
     {

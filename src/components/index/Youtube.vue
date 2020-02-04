@@ -6,7 +6,7 @@
       class="w-full md:w-1/3 p-3 inline-block"
     >
       <youtube
-        :video-id="video.videoId"
+        :video-id="video.id"
         :player-vars="{
           allowfullscreen: 1,
           constrols: 0,
@@ -32,17 +32,20 @@
 
 <static-query>
 query{
-	youtubevids: allVideos(order:ASC, limit: 1){
-    edges{
-      node{
-        item{
-          id,
-         link,
+	youtubevids: allYouTubeVideos{
+  edges{
+    node{
+      id,
+      title,
+      feedUrl,
+      items{
+        author,
+        link,
         title
-        },
       }
     }
   }
+}
 }
 </static-query>
 
@@ -56,16 +59,24 @@ export default {
   },
   computed: {
     videos: function() {
-      var ytVideos = this.$static.youtubevids.edges[0].node.item
-      for (var i = 0; i < ytVideos.length; i++) {
-        ytVideos[i].videoId = ytVideos[i].id.substring(9)
+      var parsedVideos = []
+      var ytVideos = this.$static.youtubevids.edges[0].node.items
+
+      for (const property in ytVideos) {
+        const tempVideoParsed = {}
+        tempVideoParsed.title = ytVideos[property].title
+        tempVideoParsed.link = ytVideos[property].link
+        var parts = tempVideoParsed.link.split('=')
+        var lastSegment = parts.pop() || parts.pop()
+        tempVideoParsed.id = lastSegment
+        parsedVideos.push(tempVideoParsed)
       }
       if (this.more) {
-        return ytVideos
+        return parsedVideos
       } else {
-        return ytVideos.slice(0, this.videosLimit)
+        return parsedVideos.slice(0, this.videosLimit)
       }
-      return ytVideos
+      return parsedVideos
     }
   },
   methods: {
