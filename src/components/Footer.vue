@@ -5,7 +5,7 @@
       <div class="w-full flex flex-col md:flex-row py-6">
         <div class="flex-2 mb-6">
           <a
-            class="text-orange-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+            class="no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
             href="/"
             id="black"
           >
@@ -27,8 +27,9 @@
               <a
                 href="https://www.linkedin.com/in/mmoscosa/"
                 target="blank"
-                class="no-underline hover:underline text-gray-800 hover:text-orange-500"
+                class="no-underline hover:underline text-gray-800 text"
               >
+                <font-awesome :icon="['fab', 'linkedin']" />
                 Linkedin
               </a>
             </li>
@@ -36,8 +37,9 @@
               <a
                 href="https://twitter.com/mmoscosa"
                 target="blank"
-                class="no-underline hover:underline text-gray-800 hover:text-orange-500"
+                class="no-underline hover:underline text-gray-800 text"
               >
+                <font-awesome :icon="['fab', 'twitter']" />
                 Twitter
               </a>
             </li>
@@ -45,8 +47,9 @@
               <a
                 href="https://www.instagram.com/mmoscosa/"
                 target="blank"
-                class="no-underline hover:underline text-gray-800 hover:text-orange-500"
+                class="no-underline hover:underline text-gray-800 text"
               >
+                <font-awesome :icon="['fab', 'instagram']" />
                 Instagram
               </a>
             </li>
@@ -59,7 +62,7 @@
               <a
                 href="https://www.paypal.me/mmoscosa"
                 target="blank"
-                class="no-underline hover:underline text-gray-800 hover:text-orange-500"
+                class="no-underline hover:underline text-gray-800 text"
               >
                 Made with ❤️
               </a>
@@ -68,7 +71,7 @@
               <a
                 href="https://gridsome.org"
                 target="blank"
-                class="no-underline hover:underline text-gray-800 hover:text-orange-500"
+                class="no-underline hover:underline text-gray-800 text"
               >
                 Using Gridsome
               </a>
@@ -76,7 +79,7 @@
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
               <a
                 href="/"
-                class="no-underline hover:underline text-gray-800 hover:text-orange-500"
+                class="no-underline hover:underline text-gray-800 text"
               >
                 © {{ new Date() | moment('YYYY') }} Martin Moscosa
               </a>
@@ -98,6 +101,9 @@ export default {}
 
 <style>
 #black {
+  color: #404040;
+}
+a:hover {
   color: #404040;
 }
 </style>

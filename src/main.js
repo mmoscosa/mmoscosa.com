@@ -11,12 +11,14 @@ import { config, library } from '@fortawesome/fontawesome-svg-core'
 import {
   faGithub,
   faTwitter,
-  faMedium
+  faMedium,
+  faLinkedin,
+  faInstagram
 } from '@fortawesome/free-brands-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
 config.autoAddCss = false
-library.add(faGithub, faTwitter, faMedium)
+library.add(faGithub, faTwitter, faMedium, faLinkedin, faInstagram)
 
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
