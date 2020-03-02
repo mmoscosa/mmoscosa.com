@@ -1,8 +1,8 @@
 <template>
   <section>
     <div
-      class="mx-auto p-1 bg-white"
-      v-bind:class="{ 'bg-gray-100': inExperienceSection }"
+      class="mx-auto p-1"
+      v-bind:class="[inExperienceSection ? 'bg-gray-100' : 'bg-white']"
     >
       <h1
         class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
