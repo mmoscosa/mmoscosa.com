@@ -63,7 +63,11 @@
           </div>
         </div>
       </div>
-
+      <section class="container max-w-10xl mx-auto m-8">
+        <section class="bg-white py-8 px-10 mt-10">
+          <Recommendations />
+        </section>
+      </section>
       <h1
         class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
       >
@@ -164,12 +168,17 @@
 
 <script>
 const htmlToText = require('html-to-text')
+import Recommendations from '~/components/Recommendations.vue'
+
 export default {
   data: function() {
     return {
       more: false,
       pressLimit: 7
     }
+  },
+  components: {
+    Recommendations
   },
   computed: {
     computedPress: function() {
