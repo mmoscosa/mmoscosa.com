@@ -73,9 +73,8 @@ export default {
         autoplaySpeed: 5000,
         autoplay: true,
         infinite: true,
-        navButtons: false,
-        dots: false,
         slidesToShow: 1,
+        dots: false,
         responsive: [
           {
             breakpoint: 900,
