@@ -40,7 +40,7 @@
 
 <static-query>
 query{
-  allRecomendations:allContentfulRecomendations{
+  allRecomendations:allContentfulRecomendations (order:ASC){
     edges{
       node{
         id,
@@ -100,7 +100,7 @@ export default {
         ? this.companyRecomendations
         : this.$static.allRecomendations.edges
 
-      allRecommendations = this.randomList(allRecommendations)
+      //allRecommendations = this.randomList(allRecommendations)
 
       //if we are not filtering per company, then we must take node out of each element
       if (!this.companyRecomendations) {
