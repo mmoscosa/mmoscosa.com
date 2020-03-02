@@ -2,12 +2,12 @@
   <Layout>
     <section
       class="bg-white"
-      v-for="experience in $page.allExperiences.edges"
+      v-for="experience in $static.allExperiences.edges"
       :key="experience.node.id"
     >
       <span v-if="isCurrentExperience(experience.node.id)">
         <div class="container max-w-10xl mx-auto m-8">
-          <section class="bg-white  py-8 px-10 mt-10" id="breadcrumb">
+          <section class="bg-white py-8 px-10 mt-10" id="breadcrumb">
             <ul class="flex">
               <li class="mr-6">
                 <a class="text-blue-500 hover:text-blue-800" href="/">
@@ -55,11 +55,26 @@
         <Highlights :highlights="experience.node.highlights" />
       </span>
     </section>
+    <section
+      class="bg-gray-100"
+      v-for="experience in $static.allExperiences.edges"
+      :key="experience.node.name"
+    >
+      <div
+        class="container bg-gray-100 max-w-10xl mx-auto"
+        v-if="isCurrentExperience(experience.node.id)"
+      >
+        <Recommendations
+          :companyRecomendations="experience.node.recommendations"
+        />
+      </div>
+    </section>
+
     <CallToAction />
   </Layout>
 </template>
 
-<page-query>
+<static-query>
   query{
     allExperiences:allContentfulExperience (sortBy: "updatedAt", order:DESC){
     edges{
@@ -78,6 +93,20 @@
             }
           }
         },
+        recommendations{
+         id,
+        name,
+        position,
+        linkedin
+        avatar{
+          title,
+          file{
+            url
+          }
+        }
+        recomendation,
+        created
+        },
         company{
           name,
           description,
@@ -85,21 +114,23 @@
             file{
               url
             }
+            }
           }
         }
       }
     }
-  },
   }
-</page-query>
+</static-query>
 
 <script>
 const htmlToText = require('html-to-text')
 import CompanyAbout from '~/components/experience/CompanyAbout.vue'
 import Highlights from '~/components/experience/Highlights.vue'
 import CallToAction from '~/components/CallToAction.vue'
+import Recommendations from '~/components/Recommendations.vue'
 
 export default {
+  name: 'Experience',
   metaInfo: {
     title: 'Experience'
   },
@@ -127,7 +158,8 @@ export default {
   components: {
     CompanyAbout,
     Highlights,
-    CallToAction
+    CallToAction,
+    Recommendations
   }
 }
 </script>
