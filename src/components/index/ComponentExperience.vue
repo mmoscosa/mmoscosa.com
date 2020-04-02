@@ -174,7 +174,7 @@ export default {
   data: function() {
     return {
       more: false,
-      pressLimit: 7
+      pressLimit: 5
     }
   },
   components: {

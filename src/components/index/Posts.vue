@@ -40,10 +40,10 @@
         </div>
       </div>
       <div class="w-full flex justify-center pb-24">
-        <a href="https://medium.com/@mmoscosa"
-          >See all my posts
-          <g-image class="w-8 h-8 mx-10" src="~/assets/img/medium.png"
-        /></a>
+        <a href="https://medium.com/@mmoscosa" target="blank">
+          See all my posts
+          <g-image class="w-8 h-8 mx-10" src="~/assets/img/medium.png" />
+        </a>
       </div>
 
       <h1
