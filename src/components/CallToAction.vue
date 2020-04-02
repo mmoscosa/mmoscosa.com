@@ -64,7 +64,9 @@
 export default {
   methods: {
     calendly: function() {
-      window.location = 'https://meetings.hubspot.com/mmoscosa'
+      var url = 'https://meetings.hubspot.com/mmoscosa'
+      var win = window.open(url, '_blank')
+      win.focus()
     }
   },
   components: {}
