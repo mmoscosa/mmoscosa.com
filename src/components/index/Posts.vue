@@ -131,7 +131,7 @@ export default {
   data: function() {
     return {
       more: false,
-      booksLimit: 5
+      booksLimit: 5,
     }
   },
   computed: {
@@ -141,7 +141,7 @@ export default {
       } else {
         return this.$static.books.edges.slice(0, this.booksLimit)
       }
-    }
+    },
   },
   methods: {
     toggleMore: function() {
@@ -157,8 +157,8 @@ export default {
     goToPost: function(url) {
       var win = window.open(url)
       win.focus()
-    }
-  }
+    },
+  },
 }
 </script>
 
