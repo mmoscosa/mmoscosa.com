@@ -95,11 +95,11 @@ export default {
   methods: {
     seeCV: function() {
       var url =
-        'https://docs.google.com/document/d/1kchYLpkm4axjg4GLUzzccPuB51rno1sPJxNyfpCZtyg/edit?usp=sharing'
+        'https://drive.google.com/file/d/1OCaslrgmKctsJ0_nNWakE4ftWTsk4CaP/view?usp=sharing'
       var win = window.open(url, '_blank')
       win.focus()
-    }
-  }
+    },
+  },
 }
 </script>
 
