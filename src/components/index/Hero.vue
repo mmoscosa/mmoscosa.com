@@ -24,10 +24,10 @@
             class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg"
             v-on:click="seeCV()"
           >
-            See my CV
+            See my resume
           </button>
           <p class="leading-normal text-s mb-8">
-            See a quick version of my CV as NPM package
+            See a quick version of my Resume as NPM package
             <br />by running the following in your terminal
             <span class="text-xs">(NPM required)</span>
             <span class="font-mono block terminal z-50">
