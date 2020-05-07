@@ -8,12 +8,14 @@ import VueYouTubeEmbed from 'vue-youtube-embed'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
+import Hotjar from 'vue-hotjar'
+
 import {
   faGithub,
   faTwitter,
   faMedium,
   faLinkedin,
-  faInstagram
+  faInstagram,
 } from '@fortawesome/free-brands-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
@@ -27,42 +29,46 @@ export default function(Vue, { router, head, isClient }) {
   Vue.use(VueTruncate)
   Vue.use(VueYouTubeEmbed)
 
+  Vue.use(Hotjar, {
+    id: process.env.GRIDSOME_HOTJAR_SITEID, // Hotjar Site ID
+  })
+
   Vue.component('font-awesome', FontAwesomeIcon)
 
   // Add a meta tag
   head.meta.push(
     {
       name: 'og:title',
-      content: 'Martin Moscosa'
+      content: 'Martin Moscosa',
     },
     {
       name: 'og:type',
-      content: 'website'
+      content: 'website',
     },
     {
       name: 'og:image',
       content:
-        'https://media.licdn.com/dms/image/C4E03AQHpaBMnDPlMuw/profile-displayphoto-shrink_200_200/0?e=1580342400&v=beta&t=6UUfAk8nRaciP4BRks4CEHMTC4xgaSxTT5-c2TjBSXU'
+        'https://media.licdn.com/dms/image/C4E03AQHpaBMnDPlMuw/profile-displayphoto-shrink_200_200/0?e=1580342400&v=beta&t=6UUfAk8nRaciP4BRks4CEHMTC4xgaSxTT5-c2TjBSXU',
     },
     {
       name: 'og:url',
-      content: 'https://www.mmoscosa.com'
+      content: 'https://www.mmoscosa.com',
     },
     {
       name: 'twitter:card',
-      content: 'summary'
+      content: 'summary',
     },
     {
       name: 'twitter:site',
-      content: '@mmoscosa'
+      content: '@mmoscosa',
     },
     {
       name: 'twitter:creator',
-      content: '@mmoscosa'
+      content: '@mmoscosa',
     },
     {
       name: 'twitter:summary',
-      content: 'https://www.mmoscosa.com'
+      content: 'https://www.mmoscosa.com',
     }
   )
 }
