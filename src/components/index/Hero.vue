@@ -27,7 +27,7 @@
             See my resume
           </button>
           <p class="leading-normal text-s mb-8">
-            See a quick version of my Resume as NPM package
+            See a quick version of my resume as NPM package
             <br />by running the following in your terminal
             <span class="text-xs">(NPM required)</span>
             <span class="font-mono block terminal z-50">

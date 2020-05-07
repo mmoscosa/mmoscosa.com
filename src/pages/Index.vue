@@ -17,15 +17,15 @@ import CallToAction from '~/components/CallToAction.vue'
 
 export default {
   metaInfo: {
-    title: 'Welcome!'
+    title: 'Welcome!',
   },
   components: {
     Hero,
     About,
     Posts,
     Experience,
-    CallToAction
-  }
+    CallToAction,
+  },
 }
 </script>
 
