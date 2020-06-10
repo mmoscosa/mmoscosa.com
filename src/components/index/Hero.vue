@@ -95,7 +95,7 @@ export default {
   methods: {
     seeCV: function() {
       var url =
-        'https://drive.google.com/file/d/1OCaslrgmKctsJ0_nNWakE4ftWTsk4CaP/view?usp=sharing'
+        'https://mmoscosa-resume.s3.amazonaws.com/Martin+Moscosa+Resume.pdf'
       var win = window.open(url, '_blank')
       win.focus()
     },
