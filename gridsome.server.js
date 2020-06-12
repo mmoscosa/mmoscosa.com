@@ -10,14 +10,14 @@ module.exports = function(api) {
   // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
   //})
 
-  api.loadSource(async actions => {
+  api.loadSource(async (actions) => {
     const rssParser = new RssParser()
     const { items } = await rssParser.parseURL(
       'https://medium.com/feed/@mmoscosa'
     )
 
     const tweets = await rssParser.parseURL(
-      'https://twitrss.me/twitter_user_to_rss/?user=mmoscosa'
+      'http://fetchrss.com/rss/5ee2a5388a93f8f14e8b45695ee2a5238a93f8f14e8b4567.xml'
     )
 
     const videos = await rssParser.parseURL(
@@ -25,28 +25,25 @@ module.exports = function(api) {
     )
 
     const twitterCollection = actions.addCollection({
-      typeName: 'twitterPosts'
+      typeName: 'twitterPosts',
     })
 
     const postCollection = actions.addCollection({
-      typeName: 'BlogPosts'
+      typeName: 'BlogPosts',
     })
 
     const videoCollection = actions.addCollection({
-      typeName: 'youTubeVideos'
+      typeName: 'youTubeVideos',
     })
 
     for (let twKey in tweets) {
       if (tweets.hasOwnProperty(twKey)) {
         twitterCollection.addNode({
           items: tweets['items'],
-          feedUrl: tweets['feedUrl'],
           image: tweets['image'],
           title: tweets['title'],
           link: tweets['link'],
-          description: tweets['description'],
-          language: tweets['language'],
-          ttl: tweets['ttl']
+          description: tweets['content'],
         })
       }
     }
@@ -57,7 +54,7 @@ module.exports = function(api) {
           link: videos['videos'],
           items: videos['items'],
           title: videos['title'],
-          feedUrl: videos['feedUrl']
+          feedUrl: videos['feedUrl'],
         })
       }
     }
@@ -68,7 +65,7 @@ module.exports = function(api) {
         url: item.link,
         created: item.pubDate,
         categories: item.categories,
-        item: item
+        item: item,
       })
     }
   })
