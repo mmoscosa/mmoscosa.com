@@ -9,13 +9,13 @@
       </div>
 
       <div class="block lg:hidden pr-4">
-        <a
+        <button
           id="navAction"
-          class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 mailtoui"
-          :href="mailtoHref"
+          class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75"
+          v-on:click="contact()"
         >
           ✉️
-        </a>
+        </button>
       </div>
 
       <div
@@ -31,12 +31,13 @@
 					</a> -->
           </li>
         </ul>
-        <a
+        <button
           id="navAction"
-          class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 mailtoui"
-          :href="mailtoHref"
-          >Contact me ✉️</a
+          class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75"
+          v-on:click="contact()"
         >
+          Contact me ✉️
+        </button>
       </div>
     </div>
 
@@ -45,26 +46,16 @@
 </template>
 
 <script>
-import MailtoUI from 'mailtoui/dist/mailtoui-min.js'
-
 export default {
-  data: () => ({
-    email: 'martin@mmoscosa.com',
-  }),
   props: ['siteName'],
-  mounted() {
-    MailtoUI.run({
-      title: 'Keep in touch, just saying',
-      buttonIcon1: 'https://image.flaticon.com/icons/svg/104/104069.svg',
-      //disableOnMobile: false,
-    }) // <--- Run MailtoUI manually
-  },
-  computed: {
-    mailtoHref: function() {
-      return 'mailto:' + this.email + '?subject=Hi%20there!'
+  methods: {
+    contact: function() {
+      // var url = 'https://drive.google.com/file/d/1rhPDOYvo9-xFxnVKrhsRImZOpzo7U56j/view?usp=drivesdk';
+      var url = 'mailto:martin@mmoscosa.com'
+      var win = window.open(url, '_blank')
+      win.focus()
     },
   },
-  methods: {},
 }
 </script>
 
