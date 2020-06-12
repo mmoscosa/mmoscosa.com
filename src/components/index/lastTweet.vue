@@ -7,7 +7,7 @@
     <div class="sm:flex sm:items-center px-6 py-4">
       <g-image
         class="block mx-auto sm:mx-0 sm:flex-shrink-0 h-12 sm:h-20 rounded-full"
-        :src="$static.tweets.edges[0].node.image.url"
+        src="https://pbs.twimg.com/profile_images/1160239321737236480/eCAHeJnm_400x400.jpg"
         alt="@mmoscosa twitter profile photo"
       />
 
@@ -28,14 +28,11 @@ query{
     edges{
       node{
         id,
-        feedUrl,
+        link,
         image{
           url
         }
         title,
-        description,
-        language,
-        ttl,
         items{
           title,
           creator,
@@ -55,21 +52,21 @@ export default {
       var allTweets = this.$static.tweets.edges[0].node.items
       for (const property in allTweets) {
         var author = allTweets[property].creator
-        if (author.includes('mmoscosa')) {
+        if (author.includes('Martin Moscosa')) {
           lastTweet.title = allTweets[property].title
           lastTweet.pubDate = allTweets[property].pubDate
           break
         }
       }
       return lastTweet
-    }
+    },
   },
   methods: {
     goToTwitter: function(url) {
       var win = window.open(url)
       win.focus()
-    }
-  }
+    },
+  },
 }
 </script>
 
