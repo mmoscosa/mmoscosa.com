@@ -18,7 +18,7 @@ Demonstrable track record providing technical solutions with business goals in m
 ---
 
 <p>
-  <a href="https://www.youtube.com/watch?v=XixvLyNjw98&feature=emb_logo" target="_blank"><img width="400" align='right' src="https://user-images.githubusercontent.com/1172541/87187097-3bb66d80-c2b2-11ea-8a6d-01d716d531b8.png"></a>
+  <a href="https://www.youtube.com/watch?v=XixvLyNjw98&feature=emb_logo" target="_blank"><img width="500" align='right' src="https://user-images.githubusercontent.com/1172541/87187097-3bb66d80-c2b2-11ea-8a6d-01d716d531b8.png"></a>
 </p>
 
 ### My Digital Garden 🌱
