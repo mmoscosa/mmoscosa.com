@@ -1,8 +1,8 @@
 # [![waylon walker header](https://user-images.githubusercontent.com/1172541/87187724-458ca080-c2b3-11ea-89a7-d94cdd862cbb.png)](https://mmoscosa.com)
 
 <p align='center'>
-<a href="https://twitter/mmoscosa"><img height="30" src="https://github.com/WaylonWalker/WaylonWalker/blob/master/icon/twitter.png?raw=true"></a>&nbsp;&nbsp;
-<a href="https://instagram/mmoscosa"><img height="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png"></a>&nbsp;&nbsp;
+<a href="https://twitter.com/mmoscosa"><img height="30" src="https://github.com/WaylonWalker/WaylonWalker/blob/master/icon/twitter.png?raw=true"></a>&nbsp;&nbsp;
+<a href="https://instagram.com/mmoscosa"><img height="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png"></a>&nbsp;&nbsp;
 <a href="https://www.buymeacoffee.com/mmoscosa"><img height="30" src="https://img.buymeacoffee.com/api/?name=mmoscosa&size=300&bg-image=bmc"></a>
 <a href="https://www.linkedin.com/in/mmoscosa/"><img height="30" src="https://fatimamartinez.es/wp-content/uploads/2019/02/Linkedin-logo.png"></a>
 <br/>
