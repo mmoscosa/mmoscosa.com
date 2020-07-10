@@ -1,10 +1,10 @@
-# [![waylon walker header](https://user-images.githubusercontent.com/1172541/87187724-458ca080-c2b3-11ea-89a7-d94cdd862cbb.png)](https://mmoscosa.com)
+# [![martin_moscosa header](https://user-images.githubusercontent.com/1172541/87187724-458ca080-c2b3-11ea-89a7-d94cdd862cbb.png)](https://mmoscosa.com)
 
 <p align='center'>
-<a href="https://twitter.com/mmoscosa"><img height="30" src="https://github.com/WaylonWalker/WaylonWalker/blob/master/icon/twitter.png?raw=true"></a>&nbsp;&nbsp;
-<a href="https://instagram.com/mmoscosa"><img height="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png"></a>&nbsp;&nbsp;
-<a href="https://www.buymeacoffee.com/mmoscosa"><img height="30" src="https://img.buymeacoffee.com/api/?name=mmoscosa&size=300&bg-image=bmc"></a>
-<a href="https://www.linkedin.com/in/mmoscosa/"><img height="30" src="https://fatimamartinez.es/wp-content/uploads/2019/02/Linkedin-logo.png"></a>
+<a href="https://twitter.com/mmoscosa" target="_blank"><img height="30" src="https://github.com/WaylonWalker/WaylonWalker/blob/master/icon/twitter.png?raw=true"></a>&nbsp;&nbsp;
+<a href="https://instagram.com/mmoscosa" target="_blank"><img height="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png"></a>&nbsp;&nbsp;
+<a href="https://www.buymeacoffee.com/mmoscosa" target="_blank"><img height="30" src="https://img.buymeacoffee.com/api/?name=mmoscosa&size=300&bg-image=bmc"></a>
+<a href="https://www.linkedin.com/in/mmoscosa/" target="_blank"><img height="30" src="https://fatimamartinez.es/wp-content/uploads/2019/02/Linkedin-logo.png"></a>
 <br/>
 <strong>Leader and connector in the tech and startup scene</strong>
 </p>
@@ -18,7 +18,7 @@ Demonstrable track record providing technical solutions with business goals in m
 ---
 
 <p>
-  <a href="https://www.youtube.com/watch?v=XixvLyNjw98&feature=emb_logo"><img width="300" align='right' src="https://user-images.githubusercontent.com/1172541/87187097-3bb66d80-c2b2-11ea-8a6d-01d716d531b8.png"></a>
+  <a href="https://www.youtube.com/watch?v=XixvLyNjw98&feature=emb_logo" target="_blank"><img width="400" align='right' src="https://user-images.githubusercontent.com/1172541/87187097-3bb66d80-c2b2-11ea-8a6d-01d716d531b8.png"></a>
 </p>
 
 ### My Digital Garden 🌱
@@ -35,11 +35,11 @@ Proven and seasoned leader, by enabling and sponsoring the strategic actions tow
  <summary><strong>Some press and speaking engagements highlights</strong></summary>
  <dl>
   <dt>Distributed work @ Bancolombia</dt>
-  <dd>- <a href="https://www.canva.com/design/DAEA4VJAZPY/N9wKfw8tCMtfLtLhR66Q9w/view?utm_content=DAEA4VJAZPY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Online Talk for Directives</a></dd>
+  <dd>- <a href="https://www.canva.com/design/DAEA4VJAZPY/N9wKfw8tCMtfLtLhR66Q9w/view?utm_content=DAEA4VJAZPY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" target="_blank">Online Talk for Directives</a></dd>
   <dt>Silicon Valley mexicano, larga tradición tecnológica</dt>
-  <dd>- <a href="https://www.ntrguadalajara.com/post.php?id_nota=127128">El Diario NTR</a></dd>
+  <dd>- <a href="https://www.ntrguadalajara.com/post.php?id_nota=127128" target="_blank">El Diario NTR</a></dd>
   <dt>Vive apasionado por las tecnologías</dt>
-  <dd>- <a href="https://youtu.be/hIc_3_SV52A?t=66">Azteca Noticias</a></dd>
+  <dd>- <a href="https://youtu.be/hIc_3_SV52A?t=66" target="_blank">Azteca Noticias</a></dd>
 </dl>
  
 </details>
