@@ -44,5 +44,11 @@ Proven and seasoned leader, by enabling and sponsoring the strategic actions tow
  
 </details>
 
+See a quick version of my resume as [NPM package](https://www.npmjs.com/package/mmoscosa-cv) by running the following in your terminal <small>(NPM required)</small>
+
+```bash
+npx mmoscosa-cv
+```
+
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=mmoscosa.visitor-badge)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f67e33df-0cfe-40bb-9b5d-074221926336/deploy-status)](https://app.netlify.com/sites/mmoscosa/deploys)
