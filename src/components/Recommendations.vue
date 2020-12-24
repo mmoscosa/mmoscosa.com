@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section v-if="recommendations.length">
     <div
       class="mx-auto p-1"
       v-bind:class="[inExperienceSection ? 'bg-gray-100' : 'bg-white']"
@@ -81,16 +81,16 @@ export default {
             settings: {
               slidesToShow: 3,
               navButtons: true,
-              dots: true
-            }
-          }
-        ]
-      }
+              dots: true,
+            },
+          },
+        ],
+      },
     }
   },
   components: {
     agile: VueAgile,
-    slides: Slide
+    slides: Slide,
   },
   props: ['companyRecomendations'],
   computed: {
@@ -104,7 +104,7 @@ export default {
       //if we are not filtering per company, then we must take node out of each element
       if (!this.companyRecomendations) {
         var tempAllRecomendations = []
-        allRecommendations.forEach(recommendation => {
+        allRecommendations.forEach((recommendation) => {
           tempAllRecomendations.push(recommendation.node)
         })
         allRecommendations = tempAllRecomendations
@@ -116,15 +116,15 @@ export default {
       if (this.$route.path == '/experience') {
         return true
       }
-    }
+    },
   },
   methods: {
     randomList: function(rand) {
       return rand.sort(function() {
         return 0.5 - Math.random()
       })
-    }
-  }
+    },
+  },
 }
 </script>
 

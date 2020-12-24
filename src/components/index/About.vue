@@ -18,13 +18,44 @@
             {{ $static.objective.title }}
           </h3>
           <p class="text-gray-600 mb-8" v-html="$static.objective.content"></p>
+          <h3 class="text-2xl text-gray-800 font-bold leading-none mb-3">
+            Social Media
+          </h3>
+          <p class="text-gray-600 mb-4">
+            You can also follow me on social media to rapidly know what I am up
+            to...
+          </p>
+          <div class="flex flex-row text-gray-800 pb-2">
+            <div class="pr-4">
+              <a href="https://www.instagram.com/mmoscosa/" target="_blank"
+                ><font-awesome :icon="['fab', 'instagram']"
+              /></a>
+            </div>
+            <div class="px-4">
+              <a href="https://twitter.com/mmoscosa" target="_blank"
+                ><font-awesome :icon="['fab', 'twitter']"
+              /></a>
+            </div>
+            <div class="px-4">
+              <a
+                href="https://www.youtube.com/channel/UCfZfBpohRrYqLZEHymDNc8g"
+                target="_blank"
+                ><font-awesome :icon="['fab', 'youtube']"
+              /></a>
+            </div>
+            <div class="px-4">
+              <a href="https://www.linkedin.com/in/mmoscosa/" target="_blank"
+                ><font-awesome :icon="['fab', 'linkedin']"
+              /></a>
+            </div>
+          </div>
         </div>
         <div class="w-full sm:w-1/2 p-6">
           <div class="embed-responsive aspect-ratio-16">
             <youtube video-id="XixvLyNjw98"></youtube>
           </div>
 
-          <section class="pt-6">
+          <section class="pt-12">
             <lastTweet />
           </section>
         </div>
@@ -84,8 +115,8 @@ export default {
   },
   components: {
     lastTweet,
-    youtubeVideos
-  }
+    youtubeVideos,
+  },
 }
 </script>
 
