@@ -11,10 +11,9 @@
 
 Hey there 👋,
 
-I’m a **tech and educational community senior leader and speaker**, who builds culture and community to drive product adoption at scale. With experience in for-profit and nonprofit organizations, I understand that true impact can’t come without buy-in from customers and community. I specialize in building the capacity of organizations to engage and leverage their audiences to achieve business goals. A connector with a passion for helping, inspiring and educating others to thrive.
+I’m a global tech, education, and community leader and speaker, who builds culture and community to drive change and engagement. I specialize in developing strategies and programs to create opportunity and leverage customers to achieve business goals. A connector with a passion for helping, inspiring and educating others to thrive.
 
-Demonstrable track record providing technical solutions with business goals in mind;trained as AWS Cloud Practitioner.
-
+Demonstrable track record providing technical solutions with business goals in mind; trained as AWS Cloud Practitioner
 ---
 
 <p>
