@@ -14,6 +14,7 @@ Hey there 👋,
 I’m a global tech, education, and community leader and speaker, who builds culture and community to drive change and engagement. I specialize in developing strategies and programs to create opportunity and leverage customers to achieve business goals. A connector with a passion for helping, inspiring and educating others to thrive.
 
 Demonstrable track record providing technical solutions with business goals in mind; trained as AWS Cloud Practitioner
+
 ---
 
 <p>
