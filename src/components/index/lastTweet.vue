@@ -7,7 +7,7 @@
     <div class="sm:flex sm:items-center px-6 py-4">
       <g-image
         class="block mx-auto sm:mx-0 sm:flex-shrink-0 h-12 sm:h-20 rounded-full"
-        src="https://pbs.twimg.com/profile_images/1160239321737236480/eCAHeJnm_400x400.jpg"
+        src="https://pbs.twimg.com/profile_images/1379096932539240457/DNsXodhI_400x400.jpg"
         alt="@mmoscosa twitter profile photo"
       />
 
